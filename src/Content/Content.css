@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'jura';
+  src: url('../fonts/Jura/jura-variablefont_wght-webfont.woff2') format('woff2'),
+       url('../fonts/Jura/jura-variablefont_wght-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url('../fonts/Raleway/raleway-variablefont_wght-webfont.woff2') format('woff2'),
+  url('../fonts/Raleway/raleway-variablefont_wght-webfont.woff') format('woff');
+}
+
+:root {
+  --forecolore: rgba(41, 41, 41);
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  font-family: 'raleway';
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(194, 194, 194, 0.6);
+  border: none;
+  color: var(--forecolore);
+  padding: 3px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 10px;
+  border-radius: 4px;
+  opacity: 0.75;
+}
+
+button:hover {
+  background-color: rgba(156, 156, 156);
+}
+
+button:active {
+  background-color: rgba(107, 107, 107);
+}
+
+input {
+  border-radius: 4px;
+  outline: none;
+  padding: 6px;
+  width: 500px;
+  float: center;
+  border: none;
+  background-color: rgba(232, 232, 232);
+  color: var(--forecolore);
+  /* margin-top: 10px; */
+  width: 85%;
+}
+
+input:hover {
+  background-color: rgba(218, 218, 218);
+}
+
+img {
+  border-radius: 4px;
+  /* margin-top: 10px; */
+}
+
+h1 {
+  font-family: 'raleway';
+  margin-bottom: 21.3%;
+}
+
+.input {
+  float: auto;
+  width: 90%;
+}
+
+#content{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 21.1%;
+}
+
+img {
+  width: 90%;
+}
