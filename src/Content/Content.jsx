@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './Content.css'
 import Loader from '../Loader/Loader';
@@ -9,7 +9,7 @@ const Content = (props) => {
 
   const [ name, setName ] = useState("");
   const [ buttonPressed, setButtonPressed ] = useState(false);
-  const [ test, setTest ] = useState(0)
+  // const [ test, setTest ] = useState(0)
   //const [ show, setShow] = useState(false);
   
   window.addEventListener('beforeunload', (event) => {
@@ -31,7 +31,7 @@ const Content = (props) => {
       height: height,
       width: width
       //waitTime: document.getElementById("waitTime").value
-    })
+    }, {headers: {"Access-Control-Allow-Origin": "*"}})
     .then(response => {
       setName(response.data);
       setButtonPressed(false);
@@ -46,20 +46,20 @@ const Content = (props) => {
       return (<div id='content'><Loader /></div>);
     }
   
-    return(<img src={`https://web-photographer.herokuapp.com/${name}.png`} alt="Photograph of the website you entered" />);
+    return(<img crossOrigin="true" src={`https://web-photographer.herokuapp.com/${name}.png`} alt="Photograph of the website you entered" />);
   }
   
-  const imageDisplayTest = () => {
-    if(test === 0){
-      return (<h1 className="text">Enter a link to photograph it</h1>);
-    }
-    else if(test === 1){
-      return(<img src={`https://web-photographer.herokuapp.com/${name}.png`} alt="Photograph of the website you entered" />);
-    }
-    else{
-      return (<div id='content'><Loader /></div>);
-    }
-  }
+  // const imageDisplayTest = () => {
+  //   if(test === 0){
+  //     return (<h1 className="text">Enter a link to photograph it</h1>);
+  //   }
+  //   else if(test === 1){
+  //     return(<img src={`https://web-photographer.herokuapp.com/${name}.png`} alt="Photograph of the website you entered" />);
+  //   }
+  //   else{
+  //     return (<div id='content'><Loader /></div>);
+  //   }
+  // }
   
   
 
